@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Upload Music to Playlist</title>
+    <title>Upload Playlist</title>
 </head>
 <body>
-    <h1>Upload Music to Playlist</h1>
+    <h1>Upload  Playlist</h1>
     
     <form id="uploadForm" enctype="multipart/form-data" method="post">
         <input type="file" name="musicFile" id="musicFile" accept=".mp3,.wav">
