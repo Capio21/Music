@@ -14,4 +14,6 @@ class MusicController extends BaseController
         $data['audio'] = [];
         return view('music_player', $data);
     }
+   
 }
+

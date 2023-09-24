@@ -13,7 +13,7 @@ class MusicPlayerModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'Music_Name', 'ONplayLIST'];
+    protected $allowedFields    = ['Music_Name','ONplayLIST'];
 
     // Dates
     protected $useTimestamps = false;

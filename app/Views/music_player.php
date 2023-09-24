@@ -7,54 +7,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+ 
     <style>
-    body {
-         font-family: Arial, sans-serif;
-         text-align: center;
-         background-color: #f5f5f5;
-         padding: 20px;
-     }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: orange;
+            padding: 20px;
+            color: white; /* Text color for readability */
+        }
 
-     h1 {
-         color:aliceblue #333;
-     }
+        h1 {
+            color: orange; /* Header color */
+        }
 
-     #player-container {
-         max-width: 400px;
-         margin: 0 auto;
-         padding: 20px;
-         background-color:aliceblue #fff;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-     }
+        #player-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white; /* Container background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-     audio {
-         width: 100%;
-     }
+        audio {
+            width: 100%;
+        }
 
-     #playlist {
-         list-style: none;
-         padding: 0;
-     }
+        #playlist {
+            list-style: none;
+            padding: 0;
+        }
 
-     #playlist li {
-         cursor: pointer;
-         padding: 10px;
-         background-color:cornsilk #eee;
-         margin: 5px 0;
-         transition: background-color 0.2s ease-in-out;
-     }
+        #playlist li {
+            cursor: pointer;
+            padding: 10px;
+            background-color: cornsilk; /* Item background color */
+            margin: 5px 0;
+            transition: background-color 0.2s ease-in-out;
+        }
 
-     #playlist li:hover {
-         background-color:cornsilk #ddd;
-     }
+        #playlist li:hover {
+            background-color: orange; /* Hover background color */
+        }
 
-     #playlist li.active {
-         background-color:cornsilk #007bff;
-         color: #fff;
-     }
+        #playlist li.active {
+            background-color: #0000;
+            color: white;
+        }
+
+        /* Customize the "My Playlist" button */
+        .btn-primary {
+            background-color: black;
+            border-color: orange;
+        }
+
+        .btn-primary:hover {
+            background-color: darkorange;
+            border-color: black;
+        }
     </style>
+
+
 </head>
-<body style="background-color:slateblue">
+<body style="background-color:black">
 
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -94,7 +110,7 @@
 <ul id="playlist">
 <?php if ($audio): ?>
         <?php foreach ($audio as $music_player): ?>
-            <li data-src="<?= base_url(); ?>/music_player/<?= $music['MusicName'];?>.mp3"><?= $music['MusicName']; ?>
+            <li data-src="<?= base_url(); ?>/music_player/<?= $music['Music_Name'];?>.mp3"><?= $music['Music_Name']; ?>
               <a href="/addtoplaylist" class="hover-effect">
                   <img src="<?= base_url(); ?>/add.png">
               </a>
@@ -102,7 +118,7 @@
         <?php endforeach; ?>
 <?php else: ?>
     <?php foreach ($music_player as $m): ?>
-      <li data-src="<?= base_url(); ?>/music/<?= $m['MusicName'];?>.mp3"><?= $m['MusicName']; ?>
+      <li data-src="<?= base_url(); ?>/music/<?= $m['Music_Name'];?>.mp3"><?= $m['Music_Name']; ?>
       <a href="/addtoplaylist" class="hover-effect">
           <img src="<?= base_url(); ?>/add.png" width="20">
       </a></li>
