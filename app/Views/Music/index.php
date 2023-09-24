@@ -129,11 +129,14 @@
       </div>
     </div>
     <script>
+      
     $(document).ready(function () {
   // Get references to the button and modal
   const modal = $("#myModal");
   const modalData = $("#modalData");
   const musicID = $("#musicID");
+
+
   // Function to open the modal with the specified data
   function openModalWithData(dataId) {
     // Set the data inside the modal content
