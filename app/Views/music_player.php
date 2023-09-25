@@ -12,7 +12,7 @@
     body {
          font-family: Arial, sans-serif;
          text-align: center;
-         background-color: #f5f5f5;
+         background-color: #f785f5;
          padding: 20px;
      }
 
@@ -24,7 +24,7 @@
          max-width: 400px;
          margin: 0 auto;
          padding: 20px;
-         background-color: #fff;
+         background-color: #ff101f;
          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
      }
 
